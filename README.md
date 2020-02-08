@@ -28,4 +28,4 @@ Review Standard PrintFormat **Order_LineTax AS** for Alt_OrderLine (not packed i
  * Sub FormatItem(AD_PrintFormatItem_ID=152) : change **Name** from **List Prive** to **List Price** 
  * Sub FormatItem(AD_PrintFormatItem_ID=152) : change **AD_Column** from **PriceEnteredList_List** to **PriceList_List** 
 
-**How to create AltOrder_LineView **: Note that the Alt_Orderline tab in Sales Order can be easily and conveniently replaced by the AltOrder_LineView directly
+**How to create AltOrder_LineView**: Note that the Alt_Orderline tab in Sales Order can be easily and conveniently replaced by the AltOrder_LineView directly

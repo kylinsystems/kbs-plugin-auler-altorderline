@@ -96,6 +96,7 @@ public class AltOrderLineEvent extends AbstractEventHandler{
 				//
 				firstAltID = orderlines.get(0).get_ID();
 				MALTOrderLine headerline = new MALTOrderLine(Env.getCtx(), 0, trxName);
+				headerline.setAD_Org_ID(order.getAD_Org_ID());
 				headerline.setLine(1);   
 				headerline.setC_Order_ID(order.getC_Order_ID());
 				headerline.setC_OrderLine_ID(firstAltID);
@@ -121,6 +122,7 @@ public class AltOrderLineEvent extends AbstractEventHandler{
 						if (checkline==null) { //no previous alt order line, do NEW
 							lineno++;
 							checkline = new MALTOrderLine(Env.getCtx(),0,trxName);
+							checkline.setAD_Org_ID(orderline.getAD_Org_ID());
 							checkline.setLine(lineno);
 							checkline.setCounter(1);
 							checkline.setM_Product_ID(orderline.getM_Product_ID());
@@ -146,6 +148,7 @@ public class AltOrderLineEvent extends AbstractEventHandler{
 					} else { 
 						lineno++;
 						altorderline = new MALTOrderLine(Env.getCtx(),0,trxName);
+						altorderline.setAD_Org_ID(orderline.getAD_Org_ID());
 						altorderline.setLine(lineno);
 						altorderline.setM_Product_ID(orderline.getM_Product_ID());
 						altorderline.setName(orderline.getM_Product().getName()); 
