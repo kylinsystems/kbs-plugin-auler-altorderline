@@ -17,7 +17,7 @@ Refer to https://wiki.idempiere.org/en/Plugin:_Alt_OrderLine
 
 Refine Alt_OrderLine.zip, and re-zip as 2Pack.zip
 
-Add AltOrderLineView.sql in ODT Package (ObjectData **EntityType**)
+Add AltOrderLineView.sql in ODT Package (ObjectData **AD_Tab**), since this view will link to new table which created in ODT ObjectData **AD_Table**
 
 ## TODO
 
